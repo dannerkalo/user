@@ -1,0 +1,31 @@
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
+    @Column(name = "email_address", nullable = false)
+    private String email;
+    @Column(name = "created_at", nullable = false)
+    @CreatedDate
+    private Date createdAt;
+    @Column(name = "created_by", nullable = false)
+    @CreatedBy
+    private String createdBy;
+    @Column(name = "updated_at", nullable = false)
+    @LastModifiedDate
+    private Date updatedAt;
+    @Column(name = "updated_by", nullable = false)
+    @LastModifiedBy
+    private String updatedBy;
+
+INSERT INTO `users` (`id`, `created_at`, `created_by`, `email_address`, `first_name`, `last_name`, `updated_at`, `updated_by`) VALUES ('123456789012345', '2020-01-08', 'Daniel Erkalo', 'dannerkalo@gmail.com', 'David', 'Son', '2020-01-08', 'Manager'), ('0987654321', '2020-01-08', 'Yamenso', 'yamenso@gmail.com', 'Solomon', 'Song', '2020-01-08', 'Editor');
+
+INSERT INTO `users` (`id`, `created_at`, `created_by`, `email_address`, `first_name`, `last_name`, `updated_at`, `updated_by`) VALUES ('123456789012345', '2020-01-08', 'Daniel Erkalo', 'dannerkalo@gmail.com', 'David', 'Son', '2020-01-08', 'Manager'), ('0987654321', '2020-01-08', 'Yamenso', 'yamenso@gmail.com', 'Solomon', 'Song', '2020-01-08', 'Editor');
+
+users:http://localhost:8080/api/v1/users
+user:http://localhost:8080/api/v1/users/987654321
+
+
+CLASS DIAGRAM!!!
